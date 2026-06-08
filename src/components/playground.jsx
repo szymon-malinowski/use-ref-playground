@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import Stopwatch from "./stopwatch";
 
 export default function Playground() {
   const inputRef = useRef(null);
@@ -16,6 +17,10 @@ export default function Playground() {
         <h2>1. Focus on input field</h2>
         <input type="text" ref={inputRef} />
         <button onClick={handleFocus}>Focus</button>
+      </section>
+      <section>
+        <h2>2. Storing values without re-rendering</h2>
+        <Stopwatch />
       </section>
     </>
   );
