@@ -10,6 +10,11 @@ export default function Playground() {
     console.log(inputRef.current);
   }
 
+  function clearInput() {
+    inputRef.current.value = "";
+    handleFocus();
+  }
+
   return (
     <>
       <h1>useRef Playground</h1>
@@ -17,6 +22,7 @@ export default function Playground() {
         <h2>1. Focus on input field</h2>
         <input type="text" ref={inputRef} />
         <button onClick={handleFocus}>Set Focus</button>
+        <button onClick={clearInput}>Clear</button>
       </section>
       <section>
         <h2>2. Storing values without re-rendering</h2>
